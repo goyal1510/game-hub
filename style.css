@@ -33,7 +33,9 @@ h1 {
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  flex: 1 1 200px; /* Allows flexible item width */
+  max-width: 300px; /* Limits max width */
 }
 
 .game-item:hover {
@@ -67,7 +69,55 @@ h1 {
 }
 
 .game-image:hover {
-  transform: scale(1.15);
   filter: brightness(1.1);
-  box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.5); /* Subtle white shadow */
+  box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  .game-container {
+    gap: 20px;
+  }
+
+  .game-item {
+    flex: 1 1 150px; /* More flexibility for smaller screens */
+    max-width: 220px; /* Adjust max width */
+  }
+
+  .game-link span {
+    font-size: 18px; /* Smaller font size */
+  }
+
+  .game-image {
+    width: 150px; /* Smaller image */
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .game-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .game-item {
+    max-width: 100%; /* Allow full width */
+  }
+
+  .game-link span {
+    font-size: 16px; /* Even smaller font size */
+  }
+
+  .game-image {
+    width: 120px; /* Smaller image */
+    height: 120px;
+  }
 }
