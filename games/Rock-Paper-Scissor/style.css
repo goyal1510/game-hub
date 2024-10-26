@@ -2,17 +2,18 @@
   margin: 0%;
   padding: 0%;
   text-align: center;
+  background-color: grey;
 }
 h1 {
-  color: white;
-  background-color: rgba(0, 0, 106, 0.821);
+  color: #e0e0e0;
+  background-color: black;
   height: 5rem;
   line-height: 5rem;
 }
 
 .choice {
-  height: 165px;
-  width: 165px;
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -45,7 +46,7 @@ img {
   justify-content: center;
   gap: 5rem;
   font-size: 2rem;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 #user-score,
@@ -63,5 +64,5 @@ img {
 }
 
 .msg-container {
-  margin: 5rem;
+  margin-top: 2rem;
 }
