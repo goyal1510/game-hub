@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dare X</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Modal for player name input -->
+        <div id="player-name-modal" class="modal">
+            <div class="modal-content">
+                <h2>Enter Player Names</h2>
+                <label for="player1">Player 1:</label>
+                <input type="text" id="player1" placeholder="Enter Player 1 Name">
+                <br>
+                <label for="player2">Player 2:</label>
+                <input type="text" id="player2" placeholder="Enter Player 2 Name">
+                <br>
+                <button id="start-game-btn">Start Game</button>
+            </div>
+        </div>
+
+        <div class="generator-record" style="display:none;" id="game-section">
+            <div class="generator-section">
+                <h1>Dare Generator</h1>
+                <div class="button-center">
+                    <button id="randomize-btn">Get a Dare</button>
+                </div>
+                <div class="dare-display fade-in" id="dare-display">
+                    Press the button to get a dare!
+                </div>
+
+                <!-- Updated player selection radio buttons -->
+                <div class="player-selection button-center">
+                    <label class="custom-radio">
+                        <input type="radio" name="player" value="player1" checked>
+                        <span class="radio-label" id="player1-label">Player 1</span>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="player" value="player2">
+                        <span class="radio-label" id="player2-label">Player 2</span>
+                    </label>
+                </div>
+
+                <div class="button-center">
+                    <button id="done-btn" class="completion-btn">Dare Done</button>
+                    <button id="not-done-btn" class="completion-btn">Dare Not Done</button>
+                </div>
+            </div>
+
+            <div class="record-section">
+                <h1>Dare Records</h1>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Dare</th>
+                                <th>Status</th>
+                                <th>Completed By</th>
+                            </tr>
+                        </thead>
+                        <tbody id="record-list">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- New Score Section -->
+        <div class="score-section" style="display:none;" id="score-section">
+            <h2>Scores</h2>
+            <p id="score-display">Player 1: 0 | Player 2: 0</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
