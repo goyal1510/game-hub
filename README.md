@@ -1,1 +1,1 @@
-# game-hub
+# Game Hub
