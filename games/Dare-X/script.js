@@ -10,7 +10,6 @@ async function loadDares() {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     dares = await response.json();
-    console.log("Dares loaded:", dares);
   } catch (error) {
     console.error("Error loading dares:", error);
   }
